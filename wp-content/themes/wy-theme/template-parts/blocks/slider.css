@@ -1,0 +1,12 @@
+/* Gutenberg editor styles for carousel */
+.editor-styles-wrapper .carousel-item {
+    height: 400px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-styles-wrapper .carousel-item img {
+    max-height: 100%;
+    object-fit: cover;
+}

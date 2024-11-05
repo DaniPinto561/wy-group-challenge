@@ -1,0 +1,281 @@
+// This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+
+// GLOBAL
+
+.spacer{
+    padding-top: 100px;
+    @include media-breakpoint-down(md){
+        padding-top: 50px;
+    }
+}
+a{
+    color: $primary;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.overlay-w{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: $white;
+    opacity: 0.2;
+}
+
+
+// Fonts
+
+h1{
+    font-family: $Coda-eb;
+}
+h2{
+    font-family: $Coda-eb;
+}
+h3{
+    font-family: $Coda;
+}
+h4{
+    font-family: $Coda;
+}
+p, span{
+    font-family: $reg;
+}
+ul{
+    margin: 0;
+    li{
+        margin: 0;
+        padding: 0;
+        font-family: $Coda;
+    }
+}
+a{
+    font-family: $reg;
+    color: inherit;
+    text-decoration: none !important;
+}
+
+article{
+
+    a{
+        font-family: $Coda;
+        color: $primary;
+        &:hover{
+            color: #e6cbaf;
+        }
+    }
+    p{
+        font-family: $reg;
+    }
+}
+
+.bg-search{
+    background-color: #dce1e3;
+}
+
+
+// btn
+
+a.btn.btn-secondary.understrap-read-more-link{
+  display: none;
+}
+
+// carousel
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: transparent; 
+    border: none; 
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    width: 3rem !important; 
+    height: 3rem !important; 
+    background-color: $primary; 
+    border-radius: 50%; 
+}
+
+.carousel-control-next-icon::after,
+.carousel-control-prev-icon::after {
+    display: none; 
+}
+
+
+
+// Navbar
+
+nav{
+    background-color:$white;
+    img{
+        width: 150px;
+    }
+}
+
+.navbar-light .navbar-nav .nav-link{
+    font-family: $Coda-eb;
+    color: $black;
+    transition: all ease 0.8s;
+    &:hover{
+        color: $primary;
+        transition: all ease 0.4s;
+    }
+}
+.navbar-light .navbar-nav .active>.nav-link{
+color: $primary;
+}
+
+ul#main-menu{
+    @include media-breakpoint-down(sm){
+        height: calc(100vh - 86px);
+        display: flex;
+        align-items: center;
+        li{
+            &:first-child{
+                margin-top: 40px;
+            }
+        }
+    }
+   
+}
+a.nav-link{
+    @include media-breakpoint-down(sm){
+        font-size: 30px;
+        color: $primary !important;
+        text-transform: uppercase;
+      
+        
+    }
+}
+
+.custom-toggler {
+    background: transparent; 
+    border: none; 
+    cursor: pointer; 
+    padding: 10px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-around; 
+    width: 40px; 
+    height: 40px;
+    transition: transform 0.3s ease; 
+}
+
+.bar {
+    width: 100%; 
+    height: 3px; 
+    background-color: $black; 
+    transition: background-color 0.3s ease;
+}
+
+.custom-toggler[aria-expanded="true"] .bar {
+    background-color: $primary; 
+}
+
+.custom-toggler:hover .bar {
+    background-color: $primary; /* Change color on hover */
+}
+
+
+// HERO
+
+.bg-image-wrapper{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: calc(100vh - 86px);
+    .jumbotron{
+        background-color: #ffffffd6;
+        width: 80%;
+        @include media-breakpoint-down(sm){
+            width: 100%;
+        }
+    }
+}
+
+
+// posts homepage
+
+.footer-search {
+    margin: 0 20px; 
+}
+
+.footer-search .search-field {
+    width: 200px; 
+    padding: 5px; 
+}
+
+.footer-search .search-submit {
+    padding: 5px 10px;
+    background-color: $primary; 
+    color: $white; 
+    border: none; 
+    cursor: pointer; 
+    transition: all ease 0.8s;
+    &:hover{
+        transition: all ease 0.4s;
+        background-color: #ffc78c;
+    }
+    &:active, &:focus{
+        background-color: #BF6A2A;
+    }
+}
+
+// eventos
+
+
+#wrapper-top-image{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30vh;
+}
+
+
+
+// pagination
+
+.pagination {
+    margin: 20px 0;
+}
+
+.pagination a,
+.pagination span {
+    display: inline-block;
+    padding: 4px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    background-color: $primary; 
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover,
+.pagination .current {
+    background-color: #c77a2c; 
+    color: $white;
+}
+
+.pagination .current {
+    background-color: #BF6A2A; 
+    font-weight: bold;
+    pointer-events: none;
+}
+
+
+
+// Footer
+
+#wrapper-footer{
+    background-color: #ffc78c;
+
+
+}
