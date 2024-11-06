@@ -1,0 +1,18 @@
+# Ignore WordPress core files
+wp-admin/
+wp-includes/
+wp-config.php
+*.log
+.DS_Store
+
+# Ignore node_modules (if you're using Node.js)
+node_modules/
+
+# Allow wp-content folder to be tracked
+!wp-content/
+
+# Ignore everything inside wp-content except for themes, plugins, and uploads
+wp-content/*
+!wp-content/themes/
+!wp-content/plugins/
+!wp-content/uploads/
