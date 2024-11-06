@@ -1,3 +1,6 @@
 [05-Nov-2024 15:15:06 UTC] PHP Parse error:  syntax error, unexpected '=' in /Applications/AMPPS/www/wy-test/wp-content/themes/wy-theme/template-parts/blocks/slider.php on line 3
 [05-Nov-2024 15:15:07 UTC] PHP Parse error:  syntax error, unexpected '=' in /Applications/AMPPS/www/wy-test/wp-content/themes/wy-theme/template-parts/blocks/slider.php on line 3
 [05-Nov-2024 16:13:32 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /Applications/AMPPS/www/wy-test/wp-content/themes/wy-theme/page-templates/eventos.php on line 46
+[06-Nov-2024 10:06:14 UTC] Automatic updates starting...
+[06-Nov-2024 10:06:15 UTC] Automatic updates complete.
+[06-Nov-2024 10:31:03 UTC] PHP Parse error:  syntax error, unexpected '<', expecting end of file in /Applications/AMPPS/www/wy-test/wp-content/themes/wy-theme/functions.php on line 166

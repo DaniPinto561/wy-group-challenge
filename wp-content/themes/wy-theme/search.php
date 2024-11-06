@@ -24,6 +24,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="row">
 			<div class="col-12 col-md-10 offset-md-1 spacer">
 
+			<?php custom_breadcrumb(); ?>
+
 			<!-- Do the left sidebar check and opens the primary div -->
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 

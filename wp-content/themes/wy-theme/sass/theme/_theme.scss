@@ -270,6 +270,85 @@ a.nav-link{
     pointer-events: none;
 }
 
+// post-navigation
+
+/* Estilos para a navegação entre posts */
+.navigation.post-navigation {
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 80px;
+}
+
+.navigation.post-navigation .btn-prev,
+.navigation.post-navigation .btn-next {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+.navigation.post-navigation .nav-previous,
+.navigation.post-navigation .nav-next {
+    width: 45%;
+    display: flex;
+    a{
+        color: $primary;
+        &:hover{
+            color: #e6cbaf ;
+        }
+    }
+    
+}
+.navigation.post-navigation .nav-previous{
+    justify-content: start;
+}
+.navigation.post-navigation .nav-next{
+    justify-content: end;
+}
+
+
+// breadcrumb
+
+.breadcrumb {
+    font-size: 0.9em;
+    color: $primary;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-bottom: 60px !important;
+}
+
+.breadcrumb a {
+    color: $primary;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    color: #c77a2c  ;
+}
+
+.breadcrumb span {
+    font-weight: bold;
+    color: #e6cbaf;
+    padding-left: 10px;
+}
+
+
+// single
+
+.entry-title{
+    padding-bottom: 20px;
+}
+.entry-meta{
+    display: none;
+}
 
 
 // Footer

@@ -1,0 +1,27 @@
+.footer-search {
+    margin: 0 20px;
+}
+.footer-search .search-field {
+    width: 200px;
+    padding: 5px;
+}
+.footer-search .search-submit {
+    padding: 5px 10px;
+    background-color: #df8f3b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: all ease 0.8s;
+}
+.footer-search .search-submit:hover {
+    transition: all ease 0.4s;
+    background-color: #ffc78c;
+}
+.footer-search .search-submit:active, .footer-search .search-submit:focus {
+    background-color: #bf6a2a;
+}
+
+article h2 a {
+    font-family: "coda regular";
+    color: #df8f3b;
+}

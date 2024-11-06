@@ -136,21 +136,14 @@ add_action('init', 'create_eventos_post_type');
 
 
 function enqueue_assets() {
-    // Register Bootstrap CSS from a different CDN
+
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', array(), '5.1.3');
 
-    // Register Bootstrap JS
+    wp_enqueue_style('custom-styles', get_template_directory_uri() . '/css/theme.min.css', array('bootstrap-css'));
+    
     wp_enqueue_script('bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true);
-
-    // Enqueue Block-Specific Styles
-    if (has_block('acf/hero')) {
-        wp_enqueue_style('hero-block-style', get_template_directory_uri() . '/template-parts/blocks/hero.css');
-    }
-
-    if (has_block('acf/slider')) {
-        wp_enqueue_style('slider-block-style', get_template_directory_uri() . '/template-parts/blocks/slider.css');
-    }
 }
+
 
 // Hook to enqueue scripts and styles on both front-end and block editor
 add_action('wp_enqueue_scripts', 'enqueue_assets');
@@ -161,3 +154,30 @@ function change_read_more_text($more) {
     return '... <a class="more-link" href="' . get_permalink() . '">Ler mais</a>';
 }
 add_filter('excerpt_more', 'change_read_more_text');
+
+
+
+function custom_breadcrumb() {
+    if (!is_front_page()) { // Exibe apenas em páginas diferentes da página inicial
+        echo '<nav class="breadcrumb">';
+        echo '<a href="' . home_url() . '">Home</a> » ';
+
+        if (is_page()) {
+            // Breadcrumb para páginas
+            echo '<span>' . get_the_title() . '</span>';
+        } elseif (is_single()) {
+            // Breadcrumb para posts individuais
+            echo '<span>' . get_the_title() . '</span>';
+        } elseif (is_search()) {
+            // Breadcrumb para página de pesquisa
+            echo 'Search results for: <span>' . get_search_query() . '</span>';
+        } elseif (is_404()) {
+            // Breadcrumb para página 404
+            echo '404 - Page not found';
+        }
+
+        echo '</nav>';
+    }
+}
+
+
